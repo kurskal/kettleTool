@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="/kmap/js/jquery/jquery-3.3.1.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>并发情况</title>
+</head>
+<body>
+    <span>kettle名：</span><span id="kettleName"></span></br>
+    <span>可用/总</span><span id="concurrencyInfo"></span>
+</body>
+</html>
+<script>
+    var kettleName = "[[${kettleName}]]";
+    $.ajax({
+        url:"/kmap/manage/getConcurrencyInfoByName?kettleName=" + kettleName,
+        async:false,
+        type: "post",
+        contentType : 'application/json',
+        dataType : "json",
+        success : function (result) {
+            $("#kettleName").html(kettleName);
+            var available = typeof(result.concurrencyAvailable) == "undefined" ? 0 : result.concurrencyAvailable;
+            var total = typeof(result.concurrencyTotal) == "undefined" ? 0 : result.concurrencyTotal;
+            $("#concurrencyInfo").html(available + "/" + total);
+        }
+    });
+</script>

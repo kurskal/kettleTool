@@ -1,0 +1,74 @@
+Manifest-Version: 1.0
+Class-Path: ./lib/spring-boot-starter-aop-2.1.4.RELEASE.jar ./lib/eure
+ ka-core-1.9.8.jar ./lib/stax-api-1.0.1.jar ./lib/spring-cloud-commons
+ -2.1.1.RELEASE.jar ./lib/spring-boot-starter-actuator-2.1.4.RELEASE.j
+ ar ./lib/bcprov-jdk15on-1.60.jar ./lib/bcpkix-jdk15on-1.60.jar ./lib/
+ netflix-statistics-0.1.1.jar ./lib/thymeleaf-3.0.11.RELEASE.jar ./lib
+ /jersey-apache-client4-1.19.1.jar ./lib/spring-boot-actuator-autoconf
+ igure-2.1.4.RELEASE.jar ./lib/jackson-datatype-jdk8-2.9.8.jar ./lib/l
+ ogback-core-1.2.3.jar ./lib/stax2-api-3.1.4.jar ./lib/spring-boot-sta
+ rter-json-2.1.4.RELEASE.jar ./lib/spring-expression-5.1.6.RELEASE.jar
+  ./lib/jersey-core-1.19.1.jar ./lib/spring-cloud-netflix-hystrix-2.1.
+ 1.RELEASE.jar ./lib/spring-security-rsa-1.0.7.RELEASE.jar ./lib/rxnet
+ ty-contexts-0.4.9.jar ./lib/httpclient-4.5.8.jar ./lib/xpp3_min-1.1.4
+ c.jar ./lib/netflix-infix-0.3.0.jar ./lib/spring-oxm-5.1.6.RELEASE.ja
+ r ./lib/gson-2.8.5.jar ./lib/netty-buffer-4.1.34.Final.jar ./lib/xstr
+ eam-1.4.10.jar ./lib/HdrHistogram-2.1.9.jar ./lib/logback-classic-1.2
+ .3.jar ./lib/spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar ./l
+ ib/jettison-1.3.7.jar ./lib/ribbon-core-2.3.0.jar ./lib/tomcat-embed-
+ el-9.0.17.jar ./lib/lettuce-core-5.1.6.RELEASE.jar ./lib/netty-transp
+ ort-4.1.34.Final.jar ./lib/thymeleaf-spring5-3.0.11.RELEASE.jar ./lib
+ /commons-jxpath-1.3.jar ./lib/spring-data-redis-2.1.6.RELEASE.jar ./l
+ ib/commons-math-2.2.jar ./lib/jackson-annotations-2.9.0.jar ./lib/spr
+ ing-web-5.1.6.RELEASE.jar ./lib/rxnetty-0.4.9.jar ./lib/spring-boot-a
+ ctuator-2.1.4.RELEASE.jar ./lib/woodstox-core-5.0.3.jar ./lib/spring-
+ cloud-starter-netflix-eureka-server-2.1.1.RELEASE.jar ./lib/spring-jc
+ l-5.1.6.RELEASE.jar ./lib/freemarker-2.3.28.jar ./lib/ribbon-2.3.0.ja
+ r ./lib/spring-cloud-starter-netflix-ribbon-2.1.1.RELEASE.jar ./lib/j
+ ersey-servlet-1.19.1.jar ./lib/spring-beans-5.1.6.RELEASE.jar ./lib/g
+ uice-4.1.0.jar ./lib/httpcore-4.4.11.jar ./lib/jackson-databind-2.9.8
+ .jar ./lib/netflix-eventbus-0.3.0.jar ./lib/jsr311-api-1.1.1.jar ./li
+ b/reactive-streams-1.0.2.jar ./lib/woodstox-core-asl-4.4.1.jar ./lib/
+ spring-boot-starter-data-redis-2.1.4.RELEASE.jar ./lib/antlr-2.7.7.ja
+ r ./lib/netty-handler-4.1.34.Final.jar ./lib/aspectjweaver-1.9.2.jar 
+ ./lib/LatencyUtils-2.0.3.jar ./lib/commons-configuration-1.8.jar ./li
+ b/spring-cloud-netflix-ribbon-2.1.1.RELEASE.jar ./lib/joda-time-2.10.
+ 5.jar ./lib/reactor-core-3.2.8.RELEASE.jar ./lib/stringtemplate-3.2.1
+ .jar ./lib/spring-webmvc-5.1.6.RELEASE.jar ./lib/spring-data-commons-
+ 2.1.6.RELEASE.jar ./lib/spring-security-crypto-5.1.5.RELEASE.jar ./li
+ b/spring-context-5.1.6.RELEASE.jar ./lib/archaius-core-0.7.6.jar ./li
+ b/jersey-server-1.19.1.jar ./lib/spring-aop-5.1.6.RELEASE.jar ./lib/s
+ pring-boot-starter-web-2.3.1.RELEASE.jar ./lib/aopalliance-1.0.jar ./
+ lib/log4j-to-slf4j-2.11.2.jar ./lib/javax.inject-1.jar ./lib/spring-b
+ oot-starter-logging-2.1.4.RELEASE.jar ./lib/servo-core-0.12.21.jar ./
+ lib/thymeleaf-extras-java8time-3.0.4.RELEASE.jar ./lib/jackson-module
+ -jaxb-annotations-2.9.8.jar ./lib/netty-common-4.1.34.Final.jar ./lib
+ /spring-cloud-netflix-eureka-server-2.1.1.RELEASE.jar ./lib/spring-bo
+ ot-starter-tomcat-2.1.4.RELEASE.jar ./lib/rxnetty-servo-0.4.9.jar ./l
+ ib/jul-to-slf4j-1.7.26.jar ./lib/compactmap-1.2.1.jar ./lib/jackson-d
+ atatype-jsr310-2.9.8.jar ./lib/tomcat-embed-core-9.0.17.jar ./lib/spr
+ ing-boot-autoconfigure-2.1.4.RELEASE.jar ./lib/tomcat-embed-websocket
+ -9.0.17.jar ./lib/spring-cloud-starter-netflix-archaius-2.1.1.RELEASE
+ .jar ./lib/antlr-runtime-3.4.jar ./lib/attoparser-2.0.5.RELEASE.jar .
+ /lib/unbescape-1.1.6.RELEASE.jar ./lib/ribbon-httpclient-2.3.0.jar ./
+ lib/spring-tx-5.1.6.RELEASE.jar ./lib/hystrix-core-1.5.18.jar ./lib/r
+ ibbon-loadbalancer-2.3.0.jar ./lib/commons-lang-2.6.jar ./lib/spring-
+ context-support-5.1.6.RELEASE.jar ./lib/micrometer-core-1.1.4.jar ./l
+ ib/spring-boot-starter-freemarker-2.1.4.RELEASE.jar ./lib/guava-16.0.
+ jar ./lib/spring-cloud-netflix-archaius-2.1.1.RELEASE.jar ./lib/ribbo
+ n-transport-2.3.0.jar ./lib/netflix-commons-util-0.3.0.jar ./lib/jack
+ son-dataformat-xml-2.9.8.jar ./lib/jackson-module-parameter-names-2.9
+ .8.jar ./lib/ribbon-eureka-2.3.0.jar ./lib/spring-boot-starter-thymel
+ eaf-2.1.4.RELEASE.jar ./lib/slf4j-api-1.7.26.jar ./lib/netty-resolver
+ -4.1.34.Final.jar ./lib/jersey-client-1.19.1.jar ./lib/rxjava-1.3.8.j
+ ar ./lib/spring-cloud-context-2.1.1.RELEASE.jar ./lib/jackson-core-2.
+ 9.8.jar ./lib/spring-data-keyvalue-2.1.6.RELEASE.jar ./lib/eureka-cli
+ ent-1.9.8.jar ./lib/log4j-api-2.11.2.jar ./lib/commons-collections-3.
+ 2.2.jar ./lib/stax-api-1.0-2.jar ./lib/spring-boot-starter-2.1.4.RELE
+ ASE.jar ./lib/spring-cloud-starter-2.1.1.RELEASE.jar ./lib/spring-boo
+ t-2.1.4.RELEASE.jar ./lib/commons-codec-1.11.jar ./lib/dexx-collectio
+ ns-0.2.jar ./lib/javax.annotation-api-1.3.2.jar ./lib/netty-codec-4.1
+ .34.Final.jar ./lib/jsr305-3.0.1.jar ./lib/spring-core-5.1.6.RELEASE.
+ jar ./lib/snakeyaml-1.23.jar ./lib/xmlpull-1.1.3.1.jar
+Main-Class: com.das.kettle.KettleApplication
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="/kmap/js/jquery/jquery-3.3.1.js"></script>
+<script>
+    var kettleName = "[[${kettleName}]]";
+    function save() {
+        var param = {
+            "kettleName" : $(" input[ name='kettleName' ] ").val(),
+            "host" : $(" input[ name='host' ] ").val(),
+            "port" : $(" input[ name='port' ] ").val(),
+            "concurrency" : $(" input[ name='concurrency' ] ").val(),
+            "username" : $(" input[ name='username' ] ").val(),
+            "pwd" : $(" input[ name='pwd' ] ").val()
+        };
+        $.ajax({
+            url:"/kmap/manage/saveKettleConfig?kettleName=" + kettleName,
+            async:false,
+            type: "post",
+            contentType : 'application/json',
+            dataType : "json",
+            data: JSON.stringify(param),
+            success : function (result) {
+                if(result && result.message == "S") {
+                    alert("保存成功");
+                }else{
+                    alert("保存失败: " + result.message);
+                }
+            }
+        });
+    }
+</script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit</title>
+</head>
+<body>
+    <form action="/kmap/manage/saveKettle" method="post" id="configForm">
+        <table>
+            <tr><td>kettleName : </td><td><input id="kettleName" type="text" name="kettleName" th:value="${kettleName == null ? '' : kettleName}" /></td></tr>
+            <tr><td>host : </td><td><input id="host" type="text" name="host" th:value="${configMap == null || ! #maps.containsKey(configMap,'host') ? '' : configMap.host}" /></td></tr>
+            <tr><td>port : </td><td><input id="port" type="text" name="port" th:value="${configMap == null || ! #maps.containsKey(configMap,'port') ? '' : configMap.port}" /></td></tr>
+            <tr><td>concurrency : </td><td><input id="concurrency" type="text" name="concurrency" th:value="${configMap == null || ! #maps.containsKey(configMap,'concurrency') ? '' : configMap.concurrency}" /></td></tr>
+            <tr><td>username : </td><td><input id="username" type="text" name="username" th:value="${configMap == null || ! #maps.containsKey(configMap,'username') ? '' : configMap.username}" /></td></tr>
+            <tr><td>pwd : </td><td><input id="pwd" type="text" name="pwd" th:value="${configMap == null || ! #maps.containsKey(configMap,'pwd') ? '' : configMap.pwd}" /></td></tr>
+        </table>
+    </form>
+    </br>
+    <button onclick="save()">保存</button>
+</body>
+</html>

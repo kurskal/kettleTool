@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="/kmap/js/jquery/jquery-3.3.1.js"></script>
+<script>
+    function edit(kettleName) {
+        window.location.href = "/kmap/manage/edit?kettleName=" + kettleName;
+    }
+
+    function add() {
+        window.location.href = "/kmap/manage/edit";
+    }
+
+    function remove(kettleName) {
+        var param = { "kettleName" : kettleName };
+        $.ajax({
+            url : "/kmap/manage/removeKettleConfig",
+            async : false,
+            type: "post",
+            dataType : "json",
+            data :  param,
+            success : function (result) {
+                if(result) {
+                    result.message == true ? alert("删除成功") : alert("删除失败");
+                }
+                window.location.reload();
+            }
+        });
+    }
+
+    function openConsole(kettleName) {
+        var param = { "kettleName" : kettleName };
+        $.ajax({
+            url : "/kmap/manage/getKettleConfigByName",
+            async : false,
+            type: "post",
+            dataType : "json",
+            data :  param,
+            success : function (result) {
+                if(result.config.host) {
+                    window.open("http://" + result.config.host + ":" + result.config.port+ "/kettle/status/");
+                }else{
+                    alert("未找到kettle host");
+                }
+            }
+        });
+    }
+
+    function concurrencyInfo(kettleName) {
+        window.location.href = "/kmap/manage/concurrencyInfo?kettleName=" + kettleName;
+    }
+
+    $(document).ready(function() {
+        var configTable = '<tr><td>机器名</td><td>并发情况</td><td>操作</td></tr>';
+        $.ajax({
+            url : "/kmap/manage/getListOfKettleConfig",
+            async : false,
+            type : "post",
+            dataType : "json",
+            success : function (result) {
+                $.each(result, function (i, config) {
+                    configTable += '<tr><td>' + config.kettleName + '</td>';
+                    configTable += '<td><a href="javascript:void(0)" onclick="concurrencyInfo(\'' + config.kettleName + '\')">查看</a></td>';
+                    configTable += '<td><a href="javascript:void(0)" onclick="edit(\'' + config.kettleName + '\')">修改</a>';
+                    configTable += '&nbsp<a href="javascript:void(0)" onclick="remove(\'' + config.kettleName + '\')">删除</a>';
+                    configTable += '&nbsp<a href="javascript:void(0)" onclick="openConsole(\'' + config.kettleName + '\')">控制台</a></td>';
+                    configTable += '</tr>';
+                });
+                $("#configTable").html(configTable);
+            },
+            error : function(error){
+                alert("数据获取失败");
+            }
+        });
+
+    });
+</script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理台</title>
+</head>
+<body>
+<table id="configTable" border = "1"></table>
+</br>
+<button id="add" onclick="add()">添加</button>
+</body>
+</html>
