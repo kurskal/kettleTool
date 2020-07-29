@@ -1,0 +1,2 @@
+# kettleTool
+基于kettle carte服务开发的管理kettle任务的系统，可以管理每台kettle的信息，控制每台kettle的任务并发量，支持ktr和kjb
